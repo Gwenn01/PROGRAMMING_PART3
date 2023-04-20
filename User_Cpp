@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+class Users {
+    public: 
+    int Number;
+    int Password;
+    
+    Users(int aNumber, int aPassword){
+        Number = aNumber;
+        Password = aPassword;
+        }
+};
+int main()
+{
+	Users user1(1, 123);
+	Users user2(2, 132);
+	Users user3(3, 321);
+	int attempts = 0;
+	
+	do{
+	int user;
+	cout << "  ENTER USER  ";
+	cin >> user;
+	
+     if (user == user1.Number){
+         //user1
+	   int password;
+	   cout << " Enter Password ";
+	   cin >> password;
+	   if (password == user1.Password){
+	        cout << "  THIS IS USER1 " << endl;
+	        }else {
+	           cout << " INVALID PASSWORD" << endl; 
+	            }
+	            
+         }else if (user == user2.Number){
+             // user2
+              int password;
+	   cout << " Enter Password ";
+	   cin >> password;
+	   if (password == user2.Password){
+	        cout << "  THIS IS USER2 " << endl;
+	        }else {
+	           cout << " INVALID PASSWORD"; 
+	            }
+             
+             }else if (user == user3.Number){
+             // user2
+              int password;
+	   cout << " Enter Password ";
+	   cin >> password;
+	   if (password == user3.Password){
+	        cout << "  THIS IS USER3 " << endl;
+	        }else {
+	           cout << " INVALID PASSWORD" << endl; 
+	        }
+     }
+  } while (attempts < 3);
+}
